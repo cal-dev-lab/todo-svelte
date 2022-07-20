@@ -1,10 +1,13 @@
 <script>
     import {addTodo} from "../stores/todoStore.js"
+    import { user } from "../stores/authStore.js";
     let todo = '';
+
     const handleSubmit = () => {
-        addTodo(todo);
+
+        addTodo(todo, $user.id);
         todo = '';
-        console.log('todo added');
+
     }
 </script>
 
